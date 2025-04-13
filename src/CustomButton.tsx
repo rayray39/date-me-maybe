@@ -4,11 +4,13 @@ import Button from "@mui/material/Button"
 function CustomButton({ content, onClickHandler }:{ content:string, onClickHandler: () => void; }) {
 
     return <Box sx={{
+        display:'flex',
+        justifyContent:'center',
         position:'absolute',
         bottom:90,
         left:0,
         right:0,
-        px:10
+        px: { xs: 6, sm: 10, md: 40 },
     }}>
         <Button sx={{
             height:"50px",
