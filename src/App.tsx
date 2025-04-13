@@ -1,7 +1,8 @@
+import MainPage from "./MainPage"
 
 function App() {
     return <>
-        <h1>Date me maybe</h1>
+        <MainPage />
     </>
 }
 
