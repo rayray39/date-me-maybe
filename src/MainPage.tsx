@@ -1,6 +1,6 @@
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
+import CustomButton from "./CustomButton";
 
 function MainPage() {
 
@@ -17,18 +17,7 @@ function MainPage() {
                 <h2 style={{fontWeight:'normal'}}>find out if you're compatible with me or if you just wanna know more about me!</h2>
             </Box>
 
-            <Box sx={{
-                position:'absolute',
-                bottom:90,
-                left:0,
-                right:0,
-                px:10
-            }}>
-                <Button sx={{
-                    height:"50px",
-                    fontSize:'18px'
-                }} variant="contained" disableElevation fullWidth onClick={handleStart}>{'start'}</Button>
-            </Box>
+            <CustomButton content="start" onClickHandler={handleStart} />
         </Stack>
 }
 
