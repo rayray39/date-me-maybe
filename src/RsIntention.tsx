@@ -3,6 +3,8 @@ import CustomButton from "./CustomButton"
 import Box from "@mui/material/Box"
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ToggleButton from "@mui/material/ToggleButton";
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +12,8 @@ function RsIntention() {
     const navigate = useNavigate();
 
     const [alignment, setAlignment] = useState<string | null>('left');
+
+    const [openAlert, setOpenAlert] = useState<boolean>(false);
 
     const handleAlignment = (
         // handles the ToggleButtonGroup
@@ -20,7 +24,23 @@ function RsIntention() {
         console.log(newAlignment);
     };
 
+    const handleShowAlert = () => {
+        // opens the snackbar with alert
+        setOpenAlert(true);
+    };
+
+    const handleClose = () => {
+        // closes the snackbar with alert
+        setOpenAlert(false);
+    };
+
     const nextHandler = () => {
+        if (alignment === 'left') {
+            // default toggle button group value
+            // if an option is not selected
+            handleShowAlert();
+            return;
+        }
         console.log('completed RS Intentions... proceeding on');
         navigate(`/rs-intentions/${alignment}`);
     }
@@ -59,6 +79,17 @@ function RsIntention() {
                 {"i'm just curious what this is 😛"}
             </ToggleButton>
         </ToggleButtonGroup>
+
+        <Snackbar
+            open={openAlert}
+            autoHideDuration={3000}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        >
+            <Alert onClose={handleClose} severity="error" variant="filled">
+                Select an option before proceeding!
+            </Alert>
+        </Snackbar>
 
         <CustomButton content="next" onClickHandler={nextHandler} />
     </Stack>
