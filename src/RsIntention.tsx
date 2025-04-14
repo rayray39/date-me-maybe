@@ -24,7 +24,7 @@ function RsIntention() {
     }
 
     return <Stack sx={{
-        padding:'20px'
+        px:'20px'
     }}>
         <Box>
             <h1>🧐</h1>
