@@ -6,6 +6,8 @@ function CustomButton({ content, onClickHandler }:{ content:string, onClickHandl
     return <Box sx={{
         display:'flex',
         justifyContent:'center',
+        // position:'absolute',
+        // bottom: 40,
         mt: {xs: '40px', sm: '80px'},
         left:0,
         right:0,
