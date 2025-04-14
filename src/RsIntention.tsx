@@ -41,7 +41,7 @@ function RsIntention() {
             aria-label="rs-intentions"
             sx={{
                 marginTop:"20px",
-                px: { xs: 2, sm: 2, md: 20 },
+                px: { xs: 2, sm: 10, md: 40 },
             }}
             >
             <ToggleButton value="soulmate/marriage" aria-label="soulmate-marriage">
@@ -51,10 +51,7 @@ function RsIntention() {
                 {'long term rs ❤️'}
             </ToggleButton>
             <ToggleButton value="hookups" aria-label="hookups">
-                {'hookups 💦'}
-            </ToggleButton>
-            <ToggleButton value="casual-dating" aria-label="casual-dating">
-                {'casual dating 👫'}
+                {'hookups 💦 / casual dating 👫'}
             </ToggleButton>
             <ToggleButton value="just-curious" aria-label="curious">
                 {"i'm just curious what this is 😛"}

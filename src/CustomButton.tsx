@@ -6,11 +6,10 @@ function CustomButton({ content, onClickHandler }:{ content:string, onClickHandl
     return <Box sx={{
         display:'flex',
         justifyContent:'center',
-        position:'absolute',
-        bottom:90,
+        mt: {xs: '40px', sm: '80px'},
         left:0,
         right:0,
-        px: { xs: 6, sm: 10, md: 40 },
+        px: { xs: 2, sm: 10, md: 40 },
     }}>
         <Button sx={{
             height:"50px",
