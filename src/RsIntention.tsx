@@ -4,8 +4,10 @@ import Box from "@mui/material/Box"
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ToggleButton from "@mui/material/ToggleButton";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function RsIntention() {
+    const navigate = useNavigate();
 
     const [alignment, setAlignment] = useState<string | null>('left');
 
@@ -18,9 +20,9 @@ function RsIntention() {
         console.log(newAlignment);
     };
 
-
     const nextHandler = () => {
         console.log('completed RS Intentions... proceeding on');
+        navigate(`/rs-intentions/${alignment}`);
     }
 
     return <Stack sx={{
@@ -44,7 +46,7 @@ function RsIntention() {
                 px: { xs: 2, sm: 10, md: 40 },
             }}
             >
-            <ToggleButton value="soulmate/marriage" aria-label="soulmate-marriage">
+            <ToggleButton value="soulmate-marriage" aria-label="soulmate-marriage">
                 {'soulmate/marriage 💍'}
             </ToggleButton>
             <ToggleButton value="longterm-rs" aria-label="longterm-rs">
