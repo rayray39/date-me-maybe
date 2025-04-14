@@ -1,11 +1,14 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import CustomButton from "./CustomButton";
+import { useNavigate } from "react-router-dom";
 
 function MainPage() {
+    const navigate = useNavigate();
 
     const handleStart = () => {
         console.log('starting test...');
+        navigate('/rs-intentions');
     }
 
     return <Stack sx={{
