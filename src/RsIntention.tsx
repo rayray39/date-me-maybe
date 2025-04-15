@@ -35,7 +35,7 @@ function RsIntention() {
     };
 
     const nextHandler = () => {
-        if (alignment === 'left') {
+        if (alignment === 'left' || alignment == null) {
             // default toggle button group value
             // if an option is not selected
             handleShowAlert();
