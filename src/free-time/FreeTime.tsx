@@ -7,7 +7,9 @@ import CustomButton from "../CustomButton";
 import TextField from "@mui/material/TextField";
 
 function FreeTime({ onAnswer }:{ onAnswer: (answer:string) => void }) {
+    // user response from the text field
     const [response, setResponse] = useState<string>('');
+    
     const [openAlert, setOpenAlert] = useState<boolean>(false);
 
     const handleShowAlert = () => {
