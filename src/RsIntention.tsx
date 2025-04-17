@@ -8,7 +8,7 @@ import Snackbar from '@mui/material/Snackbar';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function RsIntention() {
+function RsIntention({ onAnswer }:{ onAnswer: (answer:string) => void }) {
     const navigate = useNavigate();
 
     const [alignment, setAlignment] = useState<string | null>('left');
@@ -42,6 +42,7 @@ function RsIntention() {
             return;
         }
         console.log('completed RS Intentions... proceeding on');
+        onAnswer(alignment);
         navigate(`/rs-intentions/${alignment}`);
     }
 

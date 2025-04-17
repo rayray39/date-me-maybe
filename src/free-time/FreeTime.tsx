@@ -6,7 +6,7 @@ import { useState } from "react";
 import CustomButton from "../CustomButton";
 import TextField from "@mui/material/TextField";
 
-function FreeTime() {
+function FreeTime({ onAnswer }:{ onAnswer: (answer:string) => void }) {
     const [response, setResponse] = useState<string>('');
     const [openAlert, setOpenAlert] = useState<boolean>(false);
 
@@ -28,6 +28,7 @@ function FreeTime() {
             return;
         }
         console.log(`${response}`);
+        onAnswer(response);
         console.log('completed Free time... proceeding on');
     }
 
