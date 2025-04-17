@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import CustomButton from "../CustomButton";
 import GifWrapper from "../GifWrapper";
 
@@ -15,6 +15,8 @@ function RsIntentionsResult() {
     // gif url from giphy
     const [gifUrl, setGifUrl] = useState<string>('');
 
+    const navigate = useNavigate();
+
     // intention selected from RsIntention.tsx
     const { type } = useParams();
 
@@ -28,6 +30,7 @@ function RsIntentionsResult() {
 
     const handleContinue = () => {
         console.log('continuing...');
+        navigate('/free-time');
     }
 
     useEffect(() => {
