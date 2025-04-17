@@ -5,12 +5,17 @@ import CustomButton from "../CustomButton";
 import GifWrapper from "../GifWrapper";
 
 function RsIntentionsResult() {
+    // title on page
     const [title, setTitle] = useState<string>('');
+    // content on page
     const [content, setContent] = useState<string>('');
+    // true if [soulmate, longterm], false otherwise
     const [serious, setSerious] = useState<boolean>(false);
 
+    // gif url from giphy
     const [gifUrl, setGifUrl] = useState<string>('');
 
+    // intention selected from RsIntention.tsx
     const { type } = useParams();
 
     const fetchGif = async (url:string) => {
