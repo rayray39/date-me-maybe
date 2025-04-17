@@ -6,6 +6,7 @@ import FreeTime from "./free-time/FreeTime";
 import { useState } from "react";
 import MyFreeTime from "./free-time/MyFreeTime";
 import MvSong from "./mv-song/MvSong";
+import MyMvSong from "./mv-song/MyMvSong";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/my-free-time" element={<MyFreeTime />} />
 
             <Route path="/mv-song" element={<MvSong onAnswer={(answer:string) => handleAnswer('mv-song', answer)} />} />
+            <Route path="/my-mv-song" element={<MyMvSong />} />
           </Routes>
 
             {/* <button onClick={showResponses}>click me</button> */}

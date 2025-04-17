@@ -35,7 +35,7 @@ function MvSong({ onAnswer }:{ onAnswer:(answer:string) => void }) {
         console.log(`${response}`);
         onAnswer(response);
         console.log('completed MV Song... proceeding on');
-        // navigate('/my-free-time');
+        navigate('/my-mv-song');
     }
 
     return <Stack sx={{
