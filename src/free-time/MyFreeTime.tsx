@@ -1,10 +1,13 @@
 import Stack from "@mui/material/Stack"
 import CustomButton from "../CustomButton";
+import { useNavigate } from "react-router-dom";
 
 function MyFreeTime() {
+    const navigate = useNavigate();
 
     const handleContinue = () => {
         console.log("continuing...");
+        navigate('/mv-song');
     }
 
     return <Stack sx={{

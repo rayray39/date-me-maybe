@@ -5,6 +5,7 @@ import RsIntentionsResult from "./rs-intentions/RsIntentionsResult";
 import FreeTime from "./free-time/FreeTime";
 import { useState } from "react";
 import MyFreeTime from "./free-time/MyFreeTime";
+import MvSong from "./mv-song/MvSong";
 
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
         }));
     };
 
+    // const showResponses = () => {
+    //     console.log(responses);
+    // }
+
     return (
         <Router>
           <Routes>
@@ -27,8 +32,11 @@ function App() {
 
             <Route path="/free-time" element={<FreeTime onAnswer={(answer:string) => handleAnswer('free-time', answer)} />} />
             <Route path="/my-free-time" element={<MyFreeTime />} />
+
+            <Route path="/mv-song" element={<MvSong onAnswer={(answer:string) => handleAnswer('mv-song', answer)} />} />
           </Routes>
 
+            {/* <button onClick={showResponses}>click me</button> */}
         </Router>
       );
 }
