@@ -4,6 +4,7 @@ import RsIntention from "./RsIntention";
 import RsIntentionsResult from "./rs-intentions/RsIntentionsResult";
 import FreeTime from "./free-time/FreeTime";
 import { useState } from "react";
+import MyFreeTime from "./free-time/MyFreeTime";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path='/rs-intentions/:type' element={<RsIntentionsResult />} />
 
             <Route path="/free-time" element={<FreeTime onAnswer={(answer:string) => handleAnswer('free-time', answer)} />} />
+            <Route path="/my-free-time" element={<MyFreeTime />} />
           </Routes>
 
         </Router>
