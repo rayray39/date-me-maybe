@@ -9,7 +9,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 function BadDay({ onAnswer }:{ onAnswer:(answer:string) => void }) {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [alignment, setAlignment] =  useState<string | null>('left');
 
@@ -34,7 +34,7 @@ function BadDay({ onAnswer }:{ onAnswer:(answer:string) => void }) {
         }
         console.log('completed Bad Day... proceeding on');
         onAnswer(alignment);
-        // navigate(`/bad-day/${alignment}`);
+        navigate(`/my-bad-day`);
     }
 
     const handleAlignment = (
