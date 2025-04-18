@@ -46,7 +46,9 @@ function BadDay({ onAnswer }:{ onAnswer:(answer:string) => void }) {
         console.log(newAlignment);
     }
 
-    return <Stack>
+    return <Stack sx={{
+        px:'20px'
+    }}>
         <Box>
             <h1>😩</h1>
             <h1>You're having a bad day. What do you want from your partner?</h1>
