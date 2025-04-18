@@ -15,7 +15,7 @@ import MyQualities from "./qualities/MyQualities";
 
 function App() {
     // capture responses of user
-    const [responses, setResponses] = useState<{ [key: string]: string }>({});
+    const [_responses, setResponses] = useState<{ [key: string]: string }>({});
 
     const handleAnswer = (questionId: string, answer: string) => {
         setResponses(prev => ({
@@ -24,9 +24,9 @@ function App() {
         }));
     };
 
-    // const showResponses = () => {
-    //     console.log(responses);
-    // }
+    const showResponses = () => {
+        console.log(_responses);
+    }
 
     return (
         <Router>
@@ -54,7 +54,7 @@ function App() {
             <Route path="/my-impt-qualities" element={<MyQualities />} />
           </Routes>
 
-            {/* <button onClick={showResponses}>click me</button> */}
+            <button onClick={showResponses}>click me</button>
         </Router>
       );
 }

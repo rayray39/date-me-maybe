@@ -17,7 +17,7 @@ function RsIntention({ onAnswer }:{ onAnswer: (answer:string) => void }) {
 
     const handleAlignment = (
         // handles the ToggleButtonGroup
-        event: React.MouseEvent<HTMLElement>,
+        _event: React.MouseEvent<HTMLElement>,
         newAlignment: string | null,
     ) => {
         setAlignment(newAlignment);
