@@ -9,6 +9,8 @@ import MvSong from "./mv-song/MvSong";
 import MyMvSong from "./mv-song/MyMvSong";
 import BadDay from "./bad-day/BadDay";
 import MyBadDay from "./bad-day/MyBadDay";
+import Qualities from "./qualities/Qualities";
+import MyQualities from "./qualities/MyQualities";
 
 
 function App() {
@@ -46,6 +48,10 @@ function App() {
             {/* what do you want from partner after a bad day */}
             <Route path="/bad-day" element={<BadDay onAnswer={(answer:string) => handleAnswer('bad-day', answer)} />} />
             <Route path="/my-bad-day" element={<MyBadDay />} />
+
+            {/* important qualities in a rs */}
+            <Route path="/impt-qualities" element={<Qualities onAnswer={(answer:string) => handleAnswer('impt-qualities', answer)} />} />
+            <Route path="/my-impt-qualities" element={<MyQualities />} />
           </Routes>
 
             {/* <button onClick={showResponses}>click me</button> */}
