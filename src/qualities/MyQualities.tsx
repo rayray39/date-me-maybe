@@ -7,7 +7,7 @@ function MyQualities() {
 
     const handleContinue = () => {
         console.log("continuing...");
-        // navigate('/bad-day');
+        navigate('/show-love');
     }
 
     return <Stack sx={{
