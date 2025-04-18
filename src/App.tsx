@@ -11,6 +11,8 @@ import BadDay from "./bad-day/BadDay";
 import MyBadDay from "./bad-day/MyBadDay";
 import Qualities from "./qualities/Qualities";
 import MyQualities from "./qualities/MyQualities";
+import ShowLove from "./show-love/ShowLove";
+import MyShowLove from "./show-love/MyShowLove";
 
 
 function App() {
@@ -24,9 +26,9 @@ function App() {
         }));
     };
 
-    // const showResponses = () => {
-    //     console.log(_responses);
-    // }
+    const showResponses = () => {
+        console.log(_responses);
+    }
 
     return (
         <Router>
@@ -52,9 +54,13 @@ function App() {
             {/* important qualities in a rs */}
             <Route path="/impt-qualities" element={<Qualities onAnswer={(answer:string) => handleAnswer('impt-qualities', answer)} />} />
             <Route path="/my-impt-qualities" element={<MyQualities />} />
+
+            {/* show love to someone you care */}
+            <Route path="/show-love" element={<ShowLove onAnswer={(answer:string) => handleAnswer('show-love', answer)} />} />
+            <Route path="/my-show-love" element={<MyShowLove />} />
           </Routes>
 
-            {/* <button onClick={showResponses}>click me</button> */}
+            <button onClick={showResponses}>click me</button>
         </Router>
       );
 }
