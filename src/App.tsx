@@ -24,16 +24,16 @@ function App() {
         }));
     };
 
-    const showResponses = () => {
-        console.log(_responses);
-    }
+    // const showResponses = () => {
+    //     console.log(_responses);
+    // }
 
     return (
         <Router>
           <Routes>
             <Route path="/" element={<MainPage />} />
 
-            {/* rs intentions */}
+            {/* rs intentions MCQ */}
             <Route path="/rs-intentions" element={<RsIntention onAnswer={(answer:string) => handleAnswer('rs-intention', answer)} />} />
             <Route path='/rs-intentions/:type' element={<RsIntentionsResult />} />
 
@@ -45,7 +45,7 @@ function App() {
             <Route path="/mv-song" element={<MvSong onAnswer={(answer:string) => handleAnswer('mv-song', answer)} />} />
             <Route path="/my-mv-song" element={<MyMvSong />} />
 
-            {/* what do you want from partner after a bad day */}
+            {/* what do you want from partner after a bad day MCQ */}
             <Route path="/bad-day" element={<BadDay onAnswer={(answer:string) => handleAnswer('bad-day', answer)} />} />
             <Route path="/my-bad-day" element={<MyBadDay />} />
 
@@ -54,7 +54,7 @@ function App() {
             <Route path="/my-impt-qualities" element={<MyQualities />} />
           </Routes>
 
-            <button onClick={showResponses}>click me</button>
+            {/* <button onClick={showResponses}>click me</button> */}
         </Router>
       );
 }
