@@ -7,7 +7,7 @@ function MyMvSong() {
 
     const handleContinue = () => {
         console.log("continuing...");
-        // navigate('/mv-song');
+        navigate('/bad-day');
     }
 
     return <Stack sx={{
