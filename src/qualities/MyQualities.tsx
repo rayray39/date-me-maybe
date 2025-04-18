@@ -16,11 +16,10 @@ function MyQualities() {
         <h1>Qualities I value in a partner</h1>
 
         <h3 style={{fontWeight:'normal'}}>
-            I'm a big One Direction fan ❤️, so any songs by them are pretty much my fav.<br/>
-            I also like Lauv 🤩, some of my fav songs include Bracelet, Invisible Things, For Now, Lonely Eyes, Love Somebody etc.<br/>
-            I'm quite big on Post Malone too 😎, some of his songs that I love include Candy Paint (best song ever...), A Thousand Bad 
-            Times, Chemical etc.<br/>
-            Other artists that I listen too include Miley Cyrus 🌻, Machine Gun Kelly 🔫 and LANY 🎈.
+            I love someone who takes care of her health 💪💁, be it the gym, pilates or sports etc.<br/>
+            I also like it if she's independent, has dreams to pursue 👨‍🚀, and a desire to grow individually and 
+            together 🦸‍♀️.<br/>
+            I also love it if she's patient and not afraid to take the lead sometimes 🙋.
         </h3>
 
         <CustomButton content="continue" onClickHandler={handleContinue} />
