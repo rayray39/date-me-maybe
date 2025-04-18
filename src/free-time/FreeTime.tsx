@@ -51,7 +51,7 @@ function FreeTime({ onAnswer }:{ onAnswer: (answer:string) => void }) {
                 marginTop:'20px',
                 mx: { xs: 2, sm: 10, md: 40 }
             }}
-            id="outlined-basic" label="Your response" variant="outlined" multiline rows={4}/>
+            id="free-time-textfield" label="Your response" variant="outlined" multiline rows={4}/>
 
         <Snackbar
             open={openAlert}
