@@ -4,11 +4,11 @@ import CustomButton from "../CustomButton";
 import Box from "@mui/material/Box";
 
 function MyBadDay() {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleContinue = () => {
         console.log("continuing...");
-        // navigate('/bad-day');
+        navigate('/impt-qualities');
     }
 
     return <Stack sx={{
