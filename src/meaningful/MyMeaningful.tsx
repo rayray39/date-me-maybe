@@ -36,7 +36,7 @@ function MyShowLove() {
                 display:'block',
                 width:'100%',
                 height:'auto',
-            }} src="/dancing.jpg" alt="virtual-hugs" />
+            }} src="/dancing.jpg" alt="dancing-babies" />
         </Box>
 
         <CustomButton content="continue" onClickHandler={handleContinue} />

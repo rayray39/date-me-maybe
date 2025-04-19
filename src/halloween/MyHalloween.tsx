@@ -34,7 +34,7 @@ function MyShowLove() {
                 display:'block',
                 width:'100%',
                 height:'auto',
-            }} src="/it-costume.jpg" alt="virtual-hugs" />
+            }} src="/it-costume.jpg" alt="it-costume" />
         </Box>
 
         <CustomButton content="continue" onClickHandler={handleContinue} />
