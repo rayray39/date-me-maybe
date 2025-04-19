@@ -13,6 +13,8 @@ import Qualities from "./qualities/Qualities";
 import MyQualities from "./qualities/MyQualities";
 import ShowLove from "./show-love/ShowLove";
 import MyShowLove from "./show-love/MyShowLove";
+import Meaningful from "./meaningful/Meaningful";
+import MyMeaningful from "./meaningful/MyMeaningful";
 
 
 function App() {
@@ -58,6 +60,10 @@ function App() {
             {/* show love to someone you care */}
             <Route path="/show-love" element={<ShowLove onAnswer={(answer:string) => handleAnswer('show-love', answer)} />} />
             <Route path="/my-show-love" element={<MyShowLove />} />
+
+            {/* meaningful relationship mean to you MCQ */}
+            <Route path="/meaningful-rs" element={<Meaningful onAnswer={(answer:string) => handleAnswer('meaningful-rs', answer)} />} />
+            <Route path="/my-meaningful-rs" element={<MyMeaningful />} />
           </Routes>
 
             <button onClick={showResponses}>click me</button>
