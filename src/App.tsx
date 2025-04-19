@@ -15,6 +15,8 @@ import ShowLove from "./show-love/ShowLove";
 import MyShowLove from "./show-love/MyShowLove";
 import Meaningful from "./meaningful/Meaningful";
 import MyMeaningful from "./meaningful/MyMeaningful";
+import Halloween from "./halloween/Halloween";
+import MyHalloween from "./halloween/MyHalloween";
 
 
 function App() {
@@ -64,6 +66,10 @@ function App() {
             {/* meaningful relationship mean to you MCQ */}
             <Route path="/meaningful-rs" element={<Meaningful onAnswer={(answer:string) => handleAnswer('meaningful-rs', answer)} />} />
             <Route path="/my-meaningful-rs" element={<MyMeaningful />} />
+
+            {/* halloween costume */}
+            <Route path="/halloween" element={<Halloween onAnswer={(answer:string) => handleAnswer('halloween', answer)} />} />
+            <Route path="/my-halloween" element={<MyHalloween />} />
           </Routes>
 
             <button onClick={showResponses}>click me</button>

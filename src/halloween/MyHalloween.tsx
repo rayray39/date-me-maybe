@@ -14,13 +14,11 @@ function MyShowLove() {
     return <Stack sx={{
         px:'20px'
     }}>
-        <h1>My meaningful relationship</h1>
+        <h1>My halloween costume/couple fit idea</h1>
 
         <h3 style={{fontWeight:'normal'}}>
-            To be honest, all the options seem like what a meaningful relationship should be, but I think the ones that 
-            stood out were Partnership🥰 and Shared Growth🤭.<br/>
-            A relationship where we cheer on each other and grow together. When challenges arise,
-            we don't hide but work together to face it🦸🦸‍♂️.
+            I will dress up as Mo Salah🧔🏽 and you can dress up as Erling Haaland👱🏻‍♀️⚽️.<br/>
+            I will dress as Lewis Hamilton👦🏾 and you can be Max Verstappen🧑🏻🏎.
         </h3>
 
         <Box sx={{
@@ -36,7 +34,7 @@ function MyShowLove() {
                 display:'block',
                 width:'100%',
                 height:'auto',
-            }} src="/dancing.jpg" alt="virtual-hugs" />
+            }} src="/it-costume.jpg" alt="virtual-hugs" />
         </Box>
 
         <CustomButton content="continue" onClickHandler={handleContinue} />
