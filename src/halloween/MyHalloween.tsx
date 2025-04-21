@@ -8,7 +8,7 @@ function MyShowLove() {
 
     const handleContinue = () => {
         console.log("continuing...");
-        navigate('/halloween');
+        navigate('/rs-advice');
     }
 
     return <Stack sx={{
