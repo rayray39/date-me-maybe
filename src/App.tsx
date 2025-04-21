@@ -20,6 +20,7 @@ import MyHalloween from "./halloween/MyHalloween";
 import RsAdvice from "./rs-advice/RsAdvice";
 import MyRsAdvice from "./rs-advice/MyRsAdvice";
 import Contact from "./Contact";
+import ThankYou from "./ThankYou";
 
 
 function App() {
@@ -80,6 +81,9 @@ function App() {
 
             {/* leave a contact */}
             <Route path="/contact" element={<Contact onAnswer={(answer:string) => handleAnswer('contact', answer)} />} />
+
+            {/* thank you */}
+            <Route path="/thank-you" element={<ThankYou />} />
           </Routes>
 
             <button onClick={showResponses}>click me</button>
