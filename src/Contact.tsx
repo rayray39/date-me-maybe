@@ -8,6 +8,7 @@ function Contact({ onAnswer }:{ onAnswer:(answer:string) => void }) {
 
     const handleSubmit = () => {
         console.log('submitting responses...');
+        onAnswer(response);
     }
 
     return <Stack sx={{
