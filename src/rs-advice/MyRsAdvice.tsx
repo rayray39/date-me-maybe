@@ -7,7 +7,7 @@ function MyRsAdvice() {
 
     const handleContinue = () => {
         console.log("continuing...");
-        // navigate('/meaningful-rs');
+        navigate('/contact');
     }
 
     return <Stack sx={{
