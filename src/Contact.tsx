@@ -2,13 +2,16 @@ import Stack from "@mui/material/Stack"
 import TextField from "@mui/material/TextField";
 import { useState } from "react"
 import CustomButton from "./CustomButton";
+import { useNavigate } from "react-router-dom";
 
 function Contact({ onAnswer }:{ onAnswer:(answer:string) => void }) {
+    const navigate = useNavigate();
     const [response, setResponse] = useState<string>('');
 
     const handleSubmit = () => {
         console.log('submitting responses...');
         onAnswer(response);
+        navigate('/thank-you');
     }
 
     return <Stack sx={{
