@@ -19,6 +19,7 @@ import Halloween from "./halloween/Halloween";
 import MyHalloween from "./halloween/MyHalloween";
 import RsAdvice from "./rs-advice/RsAdvice";
 import MyRsAdvice from "./rs-advice/MyRsAdvice";
+import Contact from "./Contact";
 
 
 function App() {
@@ -76,6 +77,9 @@ function App() {
             {/* rs advice you would give younger self */}
             <Route path="/rs-advice" element={<RsAdvice onAnswer={(answer:string) => handleAnswer('rs-advice', answer)} />} />
             <Route path="/my-rs-advice" element={<MyRsAdvice />} />
+
+            {/* leave a contact */}
+            <Route path="/contact" element={<Contact onAnswer={(answer:string) => handleAnswer('contact', answer)} />} />
           </Routes>
 
             <button onClick={showResponses}>click me</button>
