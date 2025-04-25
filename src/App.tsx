@@ -25,7 +25,7 @@ import ThankYou from "./ThankYou";
 
 function App() {
     // capture responses of user
-    const [_responses, setResponses] = useState<{ [key: string]: string }>({});
+    const [responses, setResponses] = useState<{ [key: string]: string }>({});
 
     const handleAnswer = (questionId: string, answer: string) => {
         setResponses(prev => ({
@@ -34,9 +34,9 @@ function App() {
         }));
     };
 
-    const showResponses = () => {
-        console.log(_responses);
-    }
+    // const showResponses = () => {
+    //     console.log(responses);
+    // }
 
     return (
         <Router>
@@ -80,13 +80,13 @@ function App() {
             <Route path="/my-rs-advice" element={<MyRsAdvice />} />
 
             {/* leave a contact */}
-            <Route path="/contact" element={<Contact onAnswer={(answer:string) => handleAnswer('contact', answer)} />} />
+            <Route path="/contact" element={<Contact allResponses={responses} />} />
 
             {/* thank you */}
             <Route path="/thank-you" element={<ThankYou />} />
           </Routes>
 
-            <button onClick={showResponses}>click me</button>
+            {/* <button onClick={showResponses}>click me</button> */}
         </Router>
       );
 }
