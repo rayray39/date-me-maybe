@@ -11,13 +11,20 @@ function GifWrapper({ urlSource }:{ urlSource:string }) {
         marginTop:'20px',
         mx: 'auto',
     }}>
-        <iframe src={urlSource} style={{
+        {/* <iframe src={urlSource} style={{
             border:0,
             aspectRatio: '16/9',
             display:'block',
             width:'100%',
             height:'auto',
-        }} className="giphy-embed" allowFullScreen></iframe>
+        }} className="giphy-embed" allowFullScreen></iframe> */}
+
+        <img className="animated-gif" style={{
+            border:0,
+            display:'block',
+            width:'100%',
+            height:'auto',
+        }} src={urlSource} alt={urlSource} />
     </Box>
 }
 
