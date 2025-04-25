@@ -7,43 +7,39 @@ import emailjs from '@emailjs/browser';
 
 function Contact({ allResponses }:{ allResponses:{[key:string]: string} }) {
     const navigate = useNavigate();
-    const [responses, setResponses] = useState<{[key:string]: string}>(allResponses);
 
     const [contactDetails, setContactDetails] = useState<string>('');
 
     const handleSubmit = () => {
         // records the final response, which is the contact details
         console.log('submitting responses...');
+
+        const responses = {
+            ...allResponses,
+            contact: contactDetails
+        };
+
+        console.log(responses);
+        sendEmail(responses);
         
-        setResponses(prev => ({
-            // record contact details into responses
-            ...prev,
-            ['contact']: contactDetails,
-        }))
-        
-        // navigate('/thank-you');
+        navigate('/thank-you');
     }
 
     const sendEmail = ( responses:{[key:string]: string} ) => {
         // sends the email via emailjs
         const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
         const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
         const message = JSON.stringify(responses, null, 2);
 
-        emailjs.send(serviceID, templateID, {
-            message: message,
-        }).then((_response) => {
+        const templateParams = {message};
+
+        emailjs.send(serviceID, templateID, templateParams, publicKey).then((_response) => {
             console.log('Email successfully sent!', _response.status, _response.text)
         }).catch((error) => {
             console.error('Email error:', error);
         });
     }
-
-    useEffect(() => {
-        // this code will run if updates are made to responses
-        console.log(responses);
-        sendEmail(responses);
-    }, [responses])
 
     return <Stack sx={{
         px:'20px'
