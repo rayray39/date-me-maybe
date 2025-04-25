@@ -20,12 +20,16 @@ function RsIntentionsResult() {
     // intention selected from RsIntention.tsx
     const { type } = useParams();
 
-    const fetchGif = async (url:string) => {
-        try {
-            setGifUrl(url);
-        } catch (error) {
-            console.error("Error fetching gif: ", error);
-        }
+    // const fetchGif = async (url:string) => {
+    //     try {
+    //         setGifUrl(url);
+    //     } catch (error) {
+    //         console.error("Error fetching gif: ", error);
+    //     }
+    // }
+
+    const displayGif = (path:string) => {
+        setGifUrl(path);
     }
 
     const handleContinue = () => {
@@ -37,21 +41,25 @@ function RsIntentionsResult() {
         if (type === "soulmate-marriage") {
             setTitle('soulmate/marriage');
             setContent('Wow, you clearly know what you want! Although I would love to marry my soulmate too, I believe in taking things slowly and getting to know each other deeply first :))');
-            fetchGif("https://giphy.com/embed/xtDOwODhHW3Ty");      // forever along gif
+            // fetchGif("https://giphy.com/embed/xtDOwODhHW3Ty");      // forever along gif
+            displayGif('/forever alone GIF.gif');    // forever alone gif
             setSerious(true);
         } else if (type === "longterm-rs") {
             setTitle('longterm rs');
             setContent("You're serious! I'm looking for something serious too, so at least we are aligned on that :))");
-            fetchGif("https://giphy.com/embed/zCTyAD1jFhWnu");      // justin beiber gif
+            // fetchGif("https://giphy.com/embed/zCTyAD1jFhWnu");      // justin beiber gif
+            displayGif('/sexy justin bieber GIF.gif');   // justin bieber gif
             setSerious(true);
         } else if (type === "hookups") {
             setTitle('hookups/casual dating');
             setContent("Well that aint for me so bye bye, unless you wanna be my sugar mummy (jk, wink wink*)");
-            fetchGif("https://giphy.com/embed/Xw6yFn7frR3Y4");      // baby dancing gif
+            // fetchGif("https://giphy.com/embed/Xw6yFn7frR3Y4");      // baby dancing gif
+            displayGif('/dancing baby GIF.gif');    // baby dancing gif
         } else if (type === "just-curious") {
             setTitle('just curious');
             setContent("BOOOO!! GTFO!! Stop wasting my time you smelly ox (jk)");
-            fetchGif("https://giphy.com/embed/3cLYEjIaxidkQ");      // hair flip gif
+            // fetchGif("https://giphy.com/embed/3cLYEjIaxidkQ");      // hair flip gif
+            displayGif('/Dave Grohl Hair Flip GIF.gif');    // hair flip gif
         } else {
             setTitle('invalid');
             setContent('invalid');
