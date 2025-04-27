@@ -41,6 +41,25 @@ function Contact({ allResponses }:{ allResponses:{[key:string]: string} }) {
         });
     }
 
+    // sends the email via express server to emailjs
+    // emailjs refuses access to their API through a backend server (express)
+    // const sendEmail = async (responses:{[key:string]: string}) => {
+    //     const apiResponse = await fetch('http://localhost:5000/send-email', {
+    //         method:'POST',
+    //         headers:{'Content-Type':'application/json'},
+    //         body: JSON.stringify({ responses }),
+    //     })
+
+    //     const data = await apiResponse.json();
+
+    //     if (!apiResponse.ok) {
+    //         console.log(data.error);
+    //         return;
+    //     }
+
+    //     console.log(data.message);
+    // }
+
     return <Stack sx={{
         px:'20px'
     }}>
