@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import { ThemeProvider } from '@emotion/react'
 import CssBaseline from '@mui/material/CssBaseline'
-import theme from './Theme.tsx'
+import theme from './utilities/Theme.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

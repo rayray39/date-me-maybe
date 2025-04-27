@@ -3,7 +3,7 @@ import Box from "@mui/material/Box"
 import Snackbar from "@mui/material/Snackbar"
 import Stack from "@mui/material/Stack"
 import { useState } from "react";
-import CustomButton from "../CustomButton";
+import CustomButton from "../utilities/CustomButton";
 import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
 

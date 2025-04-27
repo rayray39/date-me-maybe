@@ -4,7 +4,7 @@ import Snackbar from "@mui/material/Snackbar"
 import Stack from "@mui/material/Stack"
 import ToggleButton from "@mui/material/ToggleButton"
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup"
-import CustomButton from "../CustomButton"
+import CustomButton from "../utilities/CustomButton"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 

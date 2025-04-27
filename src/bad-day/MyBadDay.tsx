@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "../CustomButton";
+import CustomButton from "../utilities/CustomButton";
 import Box from "@mui/material/Box";
 
 function MyBadDay() {

@@ -1,5 +1,5 @@
 import Stack from "@mui/material/Stack"
-import CustomButton from "../CustomButton"
+import CustomButton from "../utilities/CustomButton"
 import Box from "@mui/material/Box"
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ToggleButton from "@mui/material/ToggleButton";

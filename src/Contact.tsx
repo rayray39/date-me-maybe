@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack"
 import TextField from "@mui/material/TextField";
 import { useState } from "react"
-import CustomButton from "./CustomButton";
+import CustomButton from "./utilities/CustomButton";
 import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 

@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import CustomButton from "./CustomButton";
+import CustomButton from "./utilities/CustomButton";
 import { useNavigate } from "react-router-dom";
 
 function MainPage() {

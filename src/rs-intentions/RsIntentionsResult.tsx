@@ -1,8 +1,8 @@
 import Stack from "@mui/material/Stack";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
-import CustomButton from "../CustomButton";
-import GifWrapper from "../GifWrapper";
+import CustomButton from "../utilities/CustomButton";
+import GifWrapper from "../utilities/GifWrapper";
 
 function RsIntentionsResult() {
     // title on page

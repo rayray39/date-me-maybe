@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "../CustomButton";
+import CustomButton from "../utilities/CustomButton";
 
 function Qualities({ onAnswer }:{ onAnswer:(answer:string) => void }) {
     const navigate = useNavigate();
