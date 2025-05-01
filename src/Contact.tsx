@@ -46,6 +46,11 @@ function Contact({ allResponses }:{ allResponses:{[key:string]: string} }) {
         const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
         const message = JSON.stringify(responses, null, 2);
 
+        if (!serviceID || !templateID || !publicKey) {
+            console.log('.env variables are not found');
+            return;
+        }
+
         const templateParams = {message};
 
         emailjs.send(serviceID, templateID, templateParams, publicKey).then((_response) => {
